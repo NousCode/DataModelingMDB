@@ -1,0 +1,8 @@
+use("platzi_store")
+
+db.users.insertOne({
+  last_name: 'Vinasco Trejos',
+  email: "leogadiaz@outlook.com",
+  password: "Jc021696ing",
+  phone: "573014460799"
+})

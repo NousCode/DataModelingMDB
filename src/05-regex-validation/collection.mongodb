@@ -1,0 +1,48 @@
+use("platzi_store")
+
+db.createCollection('products', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['name'],
+      additionalProperties: false,
+      title: "Products Object Validation",
+      properties: {
+        _id: {
+          bsonType: "objectId"
+        },
+        name: {
+          bsonType: 'string'
+        },
+        sizes: {
+          bsonType: 'array',
+          // Especifica que tenga como minimu un elemento
+          minItems: 1,
+          // que no se repitan los elementos
+          uniqueItems: true,
+          // que los elementos sean de un solo tipo.
+          items: {
+            bsonType: 'string'
+          }
+        },
+        // configuración de un subdocumento.
+        category: {
+          bsonType: 'object',
+          required: ['name'],
+          additionalProperties: false,
+          properties: {
+            _id: {
+              bsonType: [ "null", "objectId"]
+            },
+            name: {
+              bsonType: 'string'
+            },
+            image: {
+              bsonType: 'string'
+            }
+          }
+        }
+      }
+    },
+  }
+});

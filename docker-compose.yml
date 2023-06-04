@@ -9,7 +9,7 @@ services:
     restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=ReX\8-
+      - MONGO_INITDB_ROOT_PASSWORD=!2vkVD
     volumes:
       - ./mongo-data:/data/db
 
