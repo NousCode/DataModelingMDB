@@ -1,0 +1,7 @@
+use("platzi_store")
+
+db.users.find({
+  "address.city": "Bogotá"
+}, {
+  shipping_address: 1
+}).count()

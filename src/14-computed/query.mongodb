@@ -1,0 +1,7 @@
+use("platzi_store")
+
+db.products.find()
+// 647d3c5703fd6357aed05f41
+db.orders.findOne({
+  _id: ObjectId('647d4204533b100ca5fde646')
+});

@@ -1,0 +1,16 @@
+use("platzi_store")
+
+db.users.insertOne({
+  email: 'nicobites@outlook.com',
+  password: 'Jc0216ing',
+  address: {
+    street: 'Cr. 934',
+    city: 'Bogotá',
+    zip: '11012'
+  },
+  shipping_address: {
+    street: 'Cr. 456',
+    city: 'Zipaquira',
+    zip: '11012'
+  }
+});
